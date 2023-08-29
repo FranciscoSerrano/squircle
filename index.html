@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Its Squircle Time</title>
   </head>
-  <body></body>
+  <body>
+    <p>
+      If you just want to know what the diameter of the circle should be for a
+      given square size just take the legth and multiply it by the sqrt of 2.
+      Here's a mini calc to do just that.
+    </p>
+    <input type="number" id="inputNumber" placeholder="Enter a number" />
+    <button onclick="multiplyBySqrt2()">Multiply by √2</button>
+    <p id="result"></p>
+
+    <script>
+      function multiplyBySqrt2() {
+        // Get the input value
+        var inputValue = parseFloat(
+          document.getElementById("inputNumber").value
+        );
+
+        // Check if the input is a valid number
+        if (!isNaN(inputValue)) {
+          var result = inputValue * Math.sqrt(2);
+          document.getElementById("result").textContent = "Result: " + result;
+        } else {
+          document.getElementById("result").textContent =
+            "Please enter a valid number.";
+        }
+      }
+    </script>
+  </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
   <script src="script.js"></script>
 </html>
