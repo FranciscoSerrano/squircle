@@ -5,10 +5,10 @@ function setup() {
   createCanvas(400, 400);
 
   circleSlider = createSlider(10, 200, 100); // Slider for circle size
-  circleSlider.position(10, height + 150);
+  circleSlider.position(10, height + 190);
 
   squareSlider = createSlider(10, 200, 100); // Slider for square size
-  squareSlider.position(10, height + 180);
+  squareSlider.position(10, height + 220);
 
   textSize(16);
 }
